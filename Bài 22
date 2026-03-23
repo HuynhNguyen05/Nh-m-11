@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Xử lý sự kiện</title>
+    <meta charset="utf-8">
+</head>
+
+<body style="font-family: Arial">
+
+    <!-- Nút gửi -->
+    <input type="button" value="Gửi"
+           onmousemove="window.status='Bạn đang di chuyển chuột vào nút Gửi';">
+
+    <br><br>
+
+    <!-- Textbox -->
+    <input type="text" name="HoTen" placeholder="Nhập họ tên"
+           onmousemove="window.status='Bạn đang di chuyển chuột vào textbox';">
+
+    <br><br>
+
+    <!-- Radio Nam -->
+    <input type="radio" name="GioiTinh"
+           onmousemove="window.status='Bạn đang chọn giới tính Nam';"> Nam
+
+    <!-- Radio Nữ -->
+    <input type="radio" name="GioiTinh"
+           onmousemove="window.status='Bạn đang chọn giới tính Nữ';"> Nữ
+
+</body>
+</html>
