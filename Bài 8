@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8 - Tính tuổi</title>
+</head>
+<body>
+
+    <h2>Tính tuổi của bạn</h2>
+
+    <label>Nhập năm sinh:</label>
+    <input type="number" id="namSinh" placeholder="Ví dụ: 2005">
+    <button onclick="tinhTuoi()">Tính tuổi</button>
+
+    <p id="ketQua"></p>
+
+    <script>
+        function tinhTuoi() {
+            // Lấy năm sinh từ input
+            let namSinh = document.getElementById("namSinh").value;
+
+            // Kiểm tra dữ liệu
+            if (namSinh === "" || isNaN(namSinh)) {
+                document.getElementById("ketQua").innerHTML = "Vui lòng nhập năm sinh hợp lệ!";
+                return;
+            }
+
+            // Lấy năm hiện tại
+            let currentYear = new Date().getFullYear();
+
+            // Tính tuổi
+            let tuoi = currentYear - namSinh;
+
+            // Hiển thị kết quả
+            document.getElementById("ketQua").innerHTML = "Tuổi của bạn là: " + tuoi;
+        }
+    </script>
+
+</body>
+</html>
