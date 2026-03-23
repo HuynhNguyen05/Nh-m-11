@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập Vinaphone</title>
+</head>
+
+<body style="font-family: Arial">
+
+    <h2>Đăng nhập Vinaphone</h2>
+
+    <form action="#">
+        User Name: <br>
+        <input type="text" name="username"><br><br>
+
+        Password: <br>
+        <input type="password" name="password"><br><br>
+
+        <!-- Thông tin ẩn -->
+        <input type="hidden" name="id" value="123">
+        <input type="hidden" name="network" value="vinaphone">
+
+        <input type="submit" value="Đăng nhập">
+    </form>
+
+</body>
+</html>
