@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9 - Tính tuổi nâng cao</title>
+</head>
+<body>
+
+    <h2>Tính tuổi (có kiểm tra năm sinh)</h2>
+    <button onclick="tinhTuoi()">Nhập năm sinh</button>
+
+    <script>
+        function tinhTuoi() {
+            let currentYear = new Date().getFullYear();
+            let namSinh;
+
+            // Yêu cầu nhập lại nếu năm sinh > năm hiện tại hoặc không hợp lệ
+            do {
+                namSinh = parseInt(prompt("Nhập năm sinh của bạn:"));
+
+                if (isNaN(namSinh)) {
+                    alert("Vui lòng nhập số hợp lệ!");
+                } else if (namSinh > currentYear) {
+                    alert("Năm sinh không được lớn hơn năm hiện tại!");
+                }
+
+            } while (isNaN(namSinh) || namSinh > currentYear);
+
+            // Tính tuổi
+            let tuoi = currentYear - namSinh;
+
+            // Hiển thị kết quả
+            alert("Tuổi của bạn là: " + tuoi);
+        }
+    </script>
+
+</body>
+</html>
